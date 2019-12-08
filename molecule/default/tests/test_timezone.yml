@@ -11,3 +11,12 @@ file:
     owner: root
     group: root
     contains: []
+
+command:
+  timezone:
+    exit-status: 0
+    exec: "date"
+    stdout:
+      - JST
+    stderr: []
+    timeout: 10000 # in milliseconds
