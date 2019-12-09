@@ -3,15 +3,20 @@
 file:
   /etc/localtime:
     exists: true
-    mode: "0777"
     owner: root
     group: root
-    filetype: symlink
     contains: []
   /usr/share/zoneinfo:
     exists: true
-    mode: "0755"
     owner: root
     group: root
-    filetype: directory
     contains: []
+
+command:
+  timezone:
+    exit-status: 0
+    exec: "date"
+    stdout:
+      - JST
+    stderr: []
+    timeout: 10000 # in milliseconds
