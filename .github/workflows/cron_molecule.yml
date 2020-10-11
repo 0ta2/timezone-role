@@ -10,7 +10,7 @@
         max-parallel: 4
         matrix:
           MOLECULE_DISTRO: ['centos:centos7', 'centos:centos8', 'fedora:32', 'fedora:33', 'ubuntu:eoan', 'ubuntu:focal']
-          python-version: ['3.5']
+          python-version: ['3.x']
 
       steps:
         - name: Check out code.
